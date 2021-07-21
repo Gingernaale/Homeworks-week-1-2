@@ -62,15 +62,10 @@ print(isEvenNumber(number: 2))
 var array: [Int] = []
 func createArray(from a:Int, to b:Int) -> [Int]{
     var aVal = a
-    while true{
-        if b >= aVal {
-            array.append(aVal)
-            aVal += 1
-        }
-        else{
-            break
-        }
-    }
+    repeat {
+        array.append(aVal)
+        aVal += 1
+    } while b >= aVal
     return array
 }
 print(createArray(from:1 , to: 100))
